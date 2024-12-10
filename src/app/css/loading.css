@@ -1,0 +1,83 @@
+.containerC{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    padding-top: 13%;
+}
+.containerC svg{
+    transform-origin: center;
+    animation: scale 0.25s ease-out forwards;
+    animation-delay: 0.5s;
+}
+.containerC circle{
+    fill: transparent;
+    stroke: #4caf50;
+    stroke-width: 5;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    stroke-linecap: round;
+    animation: progress 0.5s ease-out forwards;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    
+}
+.checkmark{
+    fill: none;
+    stroke: #fff;
+    stroke-width: 10;
+    stroke-dasharray: 75;
+    stroke-dashoffset: 75;
+    animation: checkmark 0.25s ease-out forwards;
+    animation-delay: 0.75s;
+    
+}
+@keyframes progress {
+    0%{
+        fill: transparent;
+        stroke-dashoffset: 283;
+    }
+    99%{
+        fill: transparent;
+    }
+    100%{
+        fill: #4caf50;
+        stroke-dashoffset: 0;
+        
+    }
+}
+@keyframes checkmark {
+    0%{
+        stroke-dashoffset: 75;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes scale {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.animate__bounce{
+    animation-delay: 1s; 
+}
+.FF{
+    color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+
+}
