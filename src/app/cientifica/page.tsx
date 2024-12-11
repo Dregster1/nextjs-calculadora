@@ -33,16 +33,13 @@ export default function Standard() {
         }
       }
     } else if (value === "=") {
-      try {
         const expression = inputValue
           .replace("÷", "/")
           .replace("×", "*")
           .replace("^", "**");
         const result = eval(expression); 
         setInputValue(result.toString());
-      } catch (error) {
-        setInputValue("Error");
-      }
+        
     } else if (value === "%") {
       if (inputValue) {
         const percentage = parseFloat(inputValue) / 100;
