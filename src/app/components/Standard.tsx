@@ -14,10 +14,9 @@ export default function Standard() {
     "w-full h-12 sm:h-20 py-2 px-4 text-sm sm:text-base text-gray-900 bg-gray-100 rounded hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white";
 
   const [inputValue, setInputValue] = useState("");
-  const [isError, setIsError] = useState(false); // Nueva bandera
+  const [isError, setIsError] = useState(false); 
 
   const handleButtonClick = (value: string) => {
-    // Limpiar el input si hay error y empieza a escribir
     if (isError && value !== "C") {
       setInputValue("");
       setIsError(false);
@@ -25,7 +24,7 @@ export default function Standard() {
 
     if (value === "C") {
       setInputValue("");
-      setIsError(false); // Restablecer el estado de error
+      setIsError(false); 
     } else if (value === "+/-") {
       if (inputValue) {
         if (inputValue.startsWith("-")) {
@@ -36,17 +35,16 @@ export default function Standard() {
       }
     } else if (value === "=") {
       try {
-        // Reemplazar símbolos para que eval funcione
         const expression = inputValue
           .replace("÷", "/")
           .replace("×", "*")
           .replace("^", "**");
-        const result = eval(expression); // ¡Evalúa la expresión!
+        const result = eval(expression); 
         setInputValue(result.toString());
-        setIsError(false); // Restablecer error después de evaluación exitosa
+        setIsError(false); 
       } catch (error) {
         setInputValue("Error");
-        setIsError(true); // Activar estado de error
+        setIsError(true); 
       }
     } else if (value === "%") {
       if (inputValue) {

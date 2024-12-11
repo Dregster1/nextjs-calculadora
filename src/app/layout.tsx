@@ -1,7 +1,6 @@
 "use client"
 import NavBar from "./components/Navbar";
 import "./globals.css";
-import { Metadata } from "next";
 
 
 export default function RootLayout({
